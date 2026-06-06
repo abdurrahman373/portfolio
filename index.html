@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdur Rahman | Data Scientist & Data Engineer Portfolio</title>
+    <meta name="description"
+        content="Portfolio of Abdur Rahman, a Data Science undergraduate specializing in Machine Learning, RAG, Data Pipelines, and Data Engineering.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Canvas background for interactive particle network -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                Abdur Rahman
+            </a>
+            <nav class="nav-menu">
+                <a href="#home" class="nav-link active">About</a>
+                <a href="#roles" class="nav-link">Roles & Projects</a>
+                <a href="#experience" class="nav-link">Timeline</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="#resume-center" class="btn-primary btn-sm">Resumes <i class="fa-solid fa-download"></i></a>
+            </div>
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Hero & Introduction Section (First Page) -->
+        <section id="home" class="section hero-section">
+            <div class="container hero-grid">
+                <!-- Left: Profile & Quick Info -->
+                <div class="hero-left">
+                    <div class="profile-card glass-card">
+                        <div class="profile-image-container">
+                            <img src="AbdurRahmanPortfolio.webp" alt="Abdur Rahman"
+                                onerror="this.src='https://api.dicebear.com/7.x/bottts/svg?seed=Abdur&backgroundColor=0f172a';"
+                                class="profile-img">
+                            <div class="status-indicator">
+                                <span class="status-dot"></span>
+                                <span class="status-text">Open for Roles</span>
+                            </div>
+                        </div>
+                        <h2 class="profile-name">Abdur Rahman</h2>
+                        <p class="profile-tagline">Data Science Undergraduate</p>
+
+                        <div class="profile-socials">
+                            <a href="https://github.com" target="_blank" class="social-icon" aria-label="GitHub"><i
+                                    class="fa-brands fa-github"></i></a>
+                            <a href="https://linkedin.com" target="_blank" class="social-icon" aria-label="LinkedIn"><i
+                                    class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="mailto:mfarahman373@gmail.com" class="social-icon" aria-label="Email"><i
+                                    class="fa-solid fa-envelope"></i></a>
+                            <a href="tel:+94760940373" class="social-icon" aria-label="Phone"><i
+                                    class="fa-solid fa-phone"></i></a>
+                        </div>
+
+                        <div class="profile-info-list">
+                            <div class="info-item">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <span>Aluthgama, Sri Lanka</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                                <span>Coventry Uni (NIBM)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Career Bio, Must-Have Skills, and Clickable Project Summaries -->
+                <div class="hero-right">
+                    <div class="intro-badge">Welcome to my Portfolio</div>
+                    <h1 class="hero-title">
+                        Aspiring <span class="text-glow typewriter"
+                            data-words='["AI & ML Engineer", "Data Engineer", "Data Analyst"]'></span>
+                    </h1>
+                    <p class="hero-bio">
+                        I am a Data Science undergraduate with hands-on experience in machine learning, agentic AI
+                        architectures, time series forecasting, and data pipelines. I am driven to solve real-world
+                        problems by building scalable, intelligent, and enterprise-ready data solutions.
+                    </p>
+
+                    <!-- Core/Must-Have Skills -->
+                    <div class="core-skills-wrapper">
+                        <h3 class="subsection-title"><i class="fa-solid fa-star text-glow-cyan"></i> Core Skills</h3>
+                        <div class="core-skills-grid">
+                            <div class="core-skill-badge"><i class="fa-brands fa-python text-python"></i> Python</div>
+                            <div class="core-skill-badge"><i class="fa-solid fa-database text-sql"></i> SQL</div>
+                            <div class="core-skill-badge"><i class="fa-solid fa-brain text-ml"></i> Machine Learning
+                            </div>
+                            <div class="core-skill-badge"><i class="fa-solid fa-route text-de"></i> Data Pipelines</div>
+                            <div class="core-skill-badge"><i class="fa-solid fa-robot text-ai"></i> Agentic RAG / AI
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Clickable Project Topics Summary -->
+                    <div class="project-summary-wrapper glass-card">
+                        <h3 class="summary-title"><i class="fa-solid fa-folder-open text-glow-purple"></i> Project
+                            Summary Highlights</h3>
+                        <p class="summary-subtitle">Explore my key achievements. Click a project topic to view full
+                            details under its relevant role.</p>
+
+                        <div class="summary-list">
+                            <!-- Link to ML Role -->
+                            <div class="summary-item" data-target-role="ds-ml" data-target-project="proj-rag">
+                                <div class="summary-icon"><i class="fa-solid fa-robot"></i></div>
+                                <div class="summary-content">
+                                    <h4>Agentic RAG-Based Agronomy Decision System</h4>
+                                    <p>Developed a multi-agent LangGraph system with Ollama/TinyLlama for agriculture
+                                        insights. <span class="jump-link">View details under ML &rarr;</span></p>
+                                </div>
+                            </div>
+                            <!-- Link to ML Role / Analyst -->
+                            <div class="summary-item" data-target-role="ds-ml" data-target-project="proj-drought">
+                                <div class="summary-icon"><i class="fa-solid fa-cloud-sun-rain"></i></div>
+                                <div class="summary-content">
+                                    <h4>Drought Forecasting in Anuradhapura</h4>
+                                    <p>Conducted EDA and compared ARIMA (R) and XGBoost (Python) for meteorological
+                                        forecasting. <span class="jump-link">View details under ML &rarr;</span></p>
+                                </div>
+                            </div>
+                            <!-- Link to DE Role -->
+                            <div class="summary-item" data-target-role="data-eng" data-target-project="proj-search">
+                                <div class="summary-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                                <div class="summary-content">
+                                    <h4>Scrapy & Vector Search Tech News Engine</h4>
+                                    <p>Built web scrapers, inverted index, vector space ranking, and interactive Dash
+                                        web app. <span class="jump-link">View details under Data Eng &rarr;</span></p>
+                                </div>
+                            </div>
+                            <!-- Link to DA Role -->
+                            <div class="summary-item" data-target-role="data-analyst"
+                                data-target-project="proj-spotify">
+                                <div class="summary-icon"><i class="fa-solid fa-chart-line"></i></div>
+                                <div class="summary-content">
+                                    <h4>Spotify Popularity Dash Interactive UI</h4>
+                                    <p>Analyzed listener habits and built an interactive dashboard using Dash, HTML, and
+                                        CSS. <span class="jump-link">View details under Analytics &rarr;</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Role-Specific Section -->
+        <section id="roles" class="section roles-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Explore My Specialized Roles</h2>
+                    <p class="section-subtitle">Select a role below to view tailored skillsets, targeted projects, and
+                        domain experience.</p>
+                </div>
+
+                <!-- Role Tabs -->
+                <div class="roles-tabs-container glass-card">
+                    <div class="roles-tabs-header">
+                        <button class="role-tab-btn active" data-role="ds-ml">
+                            <i class="fa-solid fa-brain"></i>
+                            <span>DS & ML Engineer</span>
+                        </button>
+                        <button class="role-tab-btn" data-role="data-eng">
+                            <i class="fa-solid fa-network-wired"></i>
+                            <span>Data Engineer</span>
+                        </button>
+                        <button class="role-tab-btn" data-role="data-analyst">
+                            <i class="fa-solid fa-chart-pie"></i>
+                            <span>Data Analyst / BA</span>
+                        </button>
+                    </div>
+
+                    <!-- Role Panels Content -->
+                    <div class="roles-tabs-content">
+
+                        <!-- Panel 1: DS & ML -->
+                        <div class="role-panel active" id="ds-ml">
+                            <div class="role-panel-intro">
+                                <h3>Data Scientist & Machine Learning Engineer</h3>
+                                <p>Designing intelligent agentic architectures, optimizing predictive systems, and
+                                    modeling complex datasets to solve real-world problems.</p>
+                            </div>
+
+                            <div class="role-panel-grid">
+                                <!-- Left Column: Specific Skills -->
+                                <div class="role-skills-column">
+                                    <h4 class="column-title"><i class="fa-solid fa-screwdriver-wrench"></i>
+                                        Role-Specific Skills</h4>
+                                    <div class="skills-showcase">
+                                        <div class="skill-category">
+                                            <h5>Machine Learning & Modeling</h5>
+                                            <div class="skill-tags">
+                                                <span>Scikit-Learn</span>
+                                                <span>TensorFlow</span>
+                                                <span>XGBoost</span>
+                                                <span>ARIMA</span>
+                                                <span>Time Series Forecasting</span>
+                                            </div>
+                                        </div>
+                                        <div class="skill-category">
+                                            <h5>Agentic AI & LLMs</h5>
+                                            <div class="skill-tags">
+                                                <span>LangChain</span>
+                                                <span>LangGraph</span>
+                                                <span>RAG (Retrieval-Augmented Gen)</span>
+                                                <span>Local LLMs (Ollama/TinyLlama)</span>
+                                                <span>Semantic Search</span>
+                                            </div>
+                                        </div>
+                                        <div class="skill-category">
+                                            <h5>Languages & Tools</h5>
+                                            <div class="skill-tags">
+                                                <span>Python</span>
+                                                <span>R Programming</span>
+                                                <span>Git</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Right Column: Projects -->
+                                <div class="role-projects-column">
+                                    <h4 class="column-title"><i class="fa-solid fa-list-check"></i> Targeted Projects
+                                    </h4>
+
+                                    <!-- Project 1 -->
+                                    <div class="project-card" id="proj-rag">
+                                        <div class="project-glow"></div>
+                                        <div class="project-header">
+                                            <span class="project-tag">AI & Agentic RAG</span>
+                                            <span class="project-date">Feb - Mar 2026</span>
+                                        </div>
+                                        <h3 class="project-title">Agentic RAG-Based Agronomy Decision Support System
+                                        </h3>
+                                        <p class="project-desc">A state-of-the-art multi-agent RAG system for
+                                            evidence-based agronomy decision-making using local LLMs and validation
+                                            chains.</p>
+                                        <ul class="project-points">
+                                            <li>Developed a multi-agent Retrieval-Augmented Generation system using
+                                                agricultural domain data.</li>
+                                            <li>Built a hybrid retrieval pipeline combining semantic search and keyword
+                                                matching using <strong>LangChain</strong> and
+                                                <strong>LangGraph</strong>.
+                                            </li>
+                                            <li>Deployed a localized LLM solution using <strong>TinyLlama (via
+                                                    Ollama)</strong> with a ReAct-based agent loop.</li>
+                                            <li>Included regulation-aware recommendations, risk assessment, and
+                                                validation scoring.</li>
+                                        </ul>
+                                        <div class="project-tech-tags">
+                                            <span>LangGraph</span>
+                                            <span>LangChain</span>
+                                            <span>TinyLlama</span>
+                                            <span>Ollama</span>
+                                            <span>Python</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Project 2 -->
+                                    <div class="project-card" id="proj-drought">
+                                        <div class="project-glow"></div>
+                                        <div class="project-header">
+                                            <span class="project-tag">Time Series ML</span>
+                                            <span class="project-date">Jan - May 2025</span>
+                                        </div>
+                                        <h3 class="project-title">Data-Driven Forecasting of Drought in Anuradhapura
+                                        </h3>
+                                        <p class="project-desc">A comparative study analyzing meteorological API data to
+                                            predict agricultural drought conditions using classical statistical and ML
+                                            models.</p>
+                                        <ul class="project-points">
+                                            <li>Collected and parsed district meteorological data via weather APIs.</li>
+                                            <li>Conducted thorough exploratory data analysis (EDA) and feature
+                                                engineering using <strong>Python</strong> and <strong>R</strong>.</li>
+                                            <li>Implemented and hyperparameter-tuned <strong>ARIMA</strong> (in R) and
+                                                <strong>XGBoost</strong> (in Python) models.
+                                            </li>
+                                            <li>Evaluated RMSE, MAE, and R² scores to identify the most stable
+                                                forecasting paradigm.</li>
+                                        </ul>
+                                        <div class="project-tech-tags">
+                                            <span>XGBoost</span>
+                                            <span>ARIMA</span>
+                                            <span>R Language</span>
+                                            <span>Python</span>
+                                            <span>Pandas</span>
+                                            <span>API Integration</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Panel 2: Data Engineer -->
+                        <div class="role-panel" id="data-eng">
+                            <div class="role-panel-intro">
+                                <h3>Data Engineer</h3>
+                                <p>Building resilient ETL pipelines, modeling warehouse architectures, and orchestrating
+                                    scraping workflows to ingest and transform unstructured data at scale.</p>
+                            </div>
+
+                            <div class="role-panel-grid">
+                                <!-- Left Column: Specific Skills -->
+                                <div class="role-skills-column">
+                                    <h4 class="column-title"><i class="fa-solid fa-screwdriver-wrench"></i>
+                                        Role-Specific Skills</h4>
+                                    <div class="skills-showcase">
+                                        <div class="skill-category">
+                                            <h5>Cloud & Warehousing</h5>
+                                            <div class="skill-tags">
+                                                <span>Snowflake</span>
+                                                <span>Amazon Web Services (AWS)</span>
+                                                <span>SQL DDL/DML</span>
+                                            </div>
+                                        </div>
+                                        <div class="skill-category">
+                                            <h5>Ingestion & Pipelines</h5>
+                                            <div class="skill-tags">
+                                                <span>ETL / ELT Pipelines</span>
+                                                <span>Web Scraping (Scrapy/BeautifulSoup)</span>
+                                                <span>Inverted Indexing</span>
+                                                <span>API Ingestion</span>
+                                            </div>
+                                        </div>
+                                        <div class="skill-category">
+                                            <h5>Libraries & Frameworks</h5>
+                                            <div class="skill-tags">
+                                                <span>Python</span>
+                                                <span>Pandas</span>
+                                                <span>SQLAlchemy</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Right Column: Projects -->
+                                <div class="role-projects-column">
+                                    <h4 class="column-title"><i class="fa-solid fa-list-check"></i> Targeted Projects
+                                    </h4>
+
+                                    <!-- Project 3 -->
+                                    <div class="project-card" id="proj-search">
+                                        <div class="project-glow"></div>
+                                        <div class="project-header">
+                                            <span class="project-tag">Data Pipelines & Search</span>
+                                            <span class="project-date">Feb - Mar 2025</span>
+                                        </div>
+                                        <h3 class="project-title">Search Engine for Tech News</h3>
+                                        <p class="project-desc">A custom indexing and retrieval system combining
+                                            scalable web-scraping pipelines with search rank theory.</p>
+                                        <ul class="project-points">
+                                            <li>Developed scrapers to extract unstructured tech news articles across
+                                                three major portals.</li>
+                                            <li>Engineered a custom text parsing pipeline, built inverted indexes, and
+                                                filtered noise/stopwords.</li>
+                                            <li>Implemented Vector Space Model (TF-IDF) and Query Likelihood Models for
+                                                relevance ranking.</li>
+                                            <li>Designed a responsive search terminal web app using
+                                                <strong>Dash</strong> to serve results in milliseconds.
+                                            </li>
+                                        </ul>
+                                        <div class="project-tech-tags">
+                                            <span>Web Scraping</span>
+                                            <span>Inverted Indexing</span>
+                                            <span>Vector Space Model</span>
+                                            <span>Dash</span>
+                                            <span>Python</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Project 4 (as DE perspective) -->
+                                    <div class="project-card">
+                                        <div class="project-glow"></div>
+                                        <div class="project-header">
+                                            <span class="project-tag">API Integration & Storage</span>
+                                            <span class="project-date">Jan - Feb 2025</span>
+                                        </div>
+                                        <h3 class="project-title">Spotify Ingestion & Popularity Pipelines</h3>
+                                        <p class="project-desc">A Python-based extraction program targeting public API
+                                            music metrics and setting up visual-ready structures.</p>
+                                        <ul class="project-points">
+                                            <li>Configured API connections to pull Spotify song metrics and track
+                                                attributes.</li>
+                                            <li>Cleaned, restructured, and managed data normalization in memory using
+                                                Pandas.</li>
+                                            <li>Supported dynamic dashboard visualization inputs with lightweight data
+                                                loading schemas.</li>
+                                        </ul>
+                                        <div class="project-tech-tags">
+                                            <span>Spotify API</span>
+                                            <span>ETL</span>
+                                            <span>Pandas</span>
+                                            <span>Data Cleaning</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Panel 3: Data Analyst / BA -->
+                        <div class="role-panel" id="data-analyst">
+                            <div class="role-panel-intro">
+                                <h3>Data Analyst & Business Analyst</h3>
+                                <p>Translating business objectives into interactive dashboard assets, leading
+                                    exploratory analysis (EDA), and drawing actionable insights for decision makers.</p>
+                            </div>
+
+                            <div class="role-panel-grid">
+                                <!-- Left Column: Specific Skills -->
+                                <div class="role-skills-column">
+                                    <h4 class="column-title"><i class="fa-solid fa-screwdriver-wrench"></i>
+                                        Role-Specific Skills</h4>
+                                    <div class="skills-showcase">
+                                        <div class="skill-category">
+                                            <h5>Dashboards & BI</h5>
+                                            <div class="skill-tags">
+                                                <span>Microsoft PowerBI</span>
+                                                <span>Plotly Dash</span>
+                                                <span>HTML / CSS Styling</span>
+                                            </div>
+                                        </div>
+                                        <div class="skill-category">
+                                            <h5>Analysis Techniques</h5>
+                                            <div class="skill-tags">
+                                                <span>Exploratory Data Analysis (EDA)</span>
+                                                <span>Time Series Visualization</span>
+                                                <span>Statistical Analysis</span>
+                                                <span>Feature Engineering</span>
+                                            </div>
+                                        </div>
+                                        <div class="skill-category">
+                                            <h5>Domain Alignment</h5>
+                                            <div class="skill-tags">
+                                                <span>Business Requirements Analysis</span>
+                                                <span>KPI Design</span>
+                                                <span>Technical Documentation</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Right Column: Projects -->
+                                <div class="role-projects-column">
+                                    <h4 class="column-title"><i class="fa-solid fa-list-check"></i> Targeted Projects
+                                    </h4>
+
+                                    <!-- Project 5 -->
+                                    <div class="project-card" id="proj-spotify">
+                                        <div class="project-glow"></div>
+                                        <div class="project-header">
+                                            <span class="project-tag">Interactive Dashboard</span>
+                                            <span class="project-date">Jan - Feb 2025</span>
+                                        </div>
+                                        <h3 class="project-title">Spotify Song Popularity Dashboard</h3>
+                                        <p class="project-desc">A highly interactive web-based data dashboard built to
+                                            explore music preferences, genres, and track metrics.</p>
+                                        <ul class="project-points">
+                                            <li>Analyzed Spotify popular tracks dataset to identify trends in user
+                                                preferences and listening habits.</li>
+                                            <li>Engineered dynamic visualization assets mapping audio features
+                                                (acousticness, energy, danceability).</li>
+                                            <li>Built a completely customized dashboard interface using <strong>Plotly
+                                                    Dash, HTML, and CSS</strong>.</li>
+                                        </ul>
+                                        <div class="project-tech-tags">
+                                            <span>Plotly Dash</span>
+                                            <span>Data Visualization</span>
+                                            <span>Exploratory Data Analysis</span>
+                                            <span>CSS Custom Layouts</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Project 6 (As Analyst perspective) -->
+                                    <div class="project-card">
+                                        <div class="project-glow"></div>
+                                        <div class="project-header">
+                                            <span class="project-tag">Exploratory Analysis</span>
+                                            <span class="project-date">Jan - May 2025</span>
+                                        </div>
+                                        <h3 class="project-title">Meteorological Drought Visualization</h3>
+                                        <p class="project-desc">Crafted analytical reports and dynamic chart interfaces
+                                            for agricultural risk monitoring in the Anuradhapura District.</p>
+                                        <ul class="project-points">
+                                            <li>Designed interactive charts showing rainfall trends, temperature curves,
+                                                and drought indices.</li>
+                                            <li>Mapped historical meteorological records to flag high-risk agricultural
+                                                periods.</li>
+                                        </ul>
+                                        <div class="project-tech-tags">
+                                            <span>Data Visualization</span>
+                                            <span>R ggplot2</span>
+                                            <span>Matplotlib</span>
+                                            <span>Meteorological Insights</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Academic & Leadership Timeline Section -->
+        <section id="experience" class="section timeline-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Education & Activities</h2>
+                    <p class="section-subtitle">My academic foundations, professional certifications, and campus
+                        involvement.</p>
+                </div>
+
+                <div class="timeline-grid">
+                    <!-- Left: Timeline -->
+                    <div class="timeline-left">
+                        <h3 class="subsection-title"><i class="fa-solid fa-graduation-cap text-glow-cyan"></i> Academic
+                            Journey</h3>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-date">2023 - 2026 (Reading)</div>
+                                <div class="timeline-content glass-card">
+                                    <h4>BSc (Hons) in Data Science</h4>
+                                    <h5>Coventry University, UK | affiliated with NIBM, Sri Lanka</h5>
+                                    <p>Deep-diving into statistical modeling, data warehouse structures, machine
+                                        learning theory, and computing infrastructure.</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-date">2013 - 2021</div>
+                                <div class="timeline-content glass-card">
+                                    <h4>D.S. Senanayake College</h4>
+                                    <h5>Colombo, Sri Lanka</h5>
+                                    <p>High school education, represented the institution in athletics and team sports.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Certifications & Leadership -->
+                    <div class="timeline-right">
+                        <!-- Certifications -->
+                        <div class="timeline-subsection">
+                            <h3 class="subsection-title"><i class="fa-solid fa-award text-glow-purple"></i> Professional
+                                Certifications</h3>
+                            <div class="certifications-grid">
+                                <div class="cert-card glass-card">
+                                    <div class="cert-icon"><i class="fa-solid fa-network-wired"></i></div>
+                                    <div class="cert-info">
+                                        <h4>Network & Administration</h4>
+                                        <p>IIT PDU</p>
+                                    </div>
+                                </div>
+                                <div class="cert-card glass-card">
+                                    <div class="cert-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                                    <div class="cert-info">
+                                        <h4>Cyber Security</h4>
+                                        <p>IIT PDU</p>
+                                    </div>
+                                </div>
+                                <div class="cert-card glass-card">
+                                    <div class="cert-icon"><i class="fa-solid fa-spider"></i></div>
+                                    <div class="cert-info">
+                                        <h4>Web Scraping & APIs</h4>
+                                        <p>365 Data Science</p>
+                                    </div>
+                                </div>
+                                <div class="cert-card glass-card">
+                                    <div class="cert-icon"><i class="fa-brands fa-python"></i></div>
+                                    <div class="cert-info">
+                                        <h4>Intro Python Programming</h4>
+                                        <p>University of Moratuwa</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Leadership & Activities -->
+                        <div class="timeline-subsection" style="margin-top: 2rem;">
+                            <h3 class="subsection-title"><i class="fa-solid fa-users text-glow-cyan"></i> Activities &
+                                Leadership</h3>
+                            <div class="leadership-card glass-card">
+                                <div class="leadership-header">
+                                    <div class="leadership-badge">Leadership</div>
+                                    <h4>Event Director - Data Science Club (NIBM)</h4>
+                                </div>
+                                <p>Organized technical events, hackathons, and knowledge-sharing workshops to foster a
+                                    vibrant coding and data science culture among university peers.</p>
+                            </div>
+                            <div class="leadership-card glass-card" style="margin-top: 1rem;">
+                                <div class="leadership-header">
+                                    <div class="leadership-badge">Extracurricular</div>
+                                    <h4>Athletic Representative</h4>
+                                </div>
+                                <p>Represented school in football and swimming, building key interpersonal strengths in
+                                    resilience, adaptability, and high-performance collaboration.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Specialized Resume Center -->
+        <section id="resume-center" class="section resume-section glass-card">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Resume Center</h2>
+                    <p class="section-subtitle">Download the specific version of my resume tailored to the role you are
+                        hiring for.</p>
+                </div>
+
+                <div class="resume-grid">
+                    <div class="resume-download-card">
+                        <div class="resume-icon text-glow-cyan"><i class="fa-solid fa-brain"></i></div>
+                        <h3>Data Science / ML Resume</h3>
+                        <p>Optimized for roles focusing on analytics, model engineering, deep learning, and advanced AI
+                            architectures.</p>
+                        <a href="Abdur_RahmanR_CV.pdf" download="Abdur_Rahman_Data_Science_CV.pdf" class="btn-primary">
+                            Download PDF <i class="fa-solid fa-file-pdf"></i>
+                        </a>
+                    </div>
+
+                    <div class="resume-download-card">
+                        <div class="resume-icon text-glow-purple"><i class="fa-solid fa-network-wired"></i></div>
+                        <h3>Data Engineering Resume</h3>
+                        <p>Optimized for roles focusing on databases, Snowflake, cloud pipelines, AWS infrastructure,
+                            and scalable ingestion.</p>
+                        <a href="DE/Abdur Rahman_DE.pdf" download="Abdur_Rahman_Data_Engineering_CV.pdf"
+                            class="btn-secondary">
+                            Download PDF <i class="fa-solid fa-file-pdf"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Get In Touch</h2>
+                    <p class="section-subtitle">Let's discuss opportunities, projects, or collaborations. Send a message
+                        directly.</p>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Contact Cards / Info -->
+                    <div class="contact-info">
+                        <div class="contact-detail-card glass-card">
+                            <div class="contact-item-icon text-glow-cyan">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="contact-item-text">
+                                <span>Email Address</span>
+                                <a href="mailto:mfarahman373@gmail.com">mfarahman373@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-detail-card glass-card">
+                            <div class="contact-item-icon text-glow-purple">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div class="contact-item-text">
+                                <span>Call Direct</span>
+                                <a href="tel:+94760940373">+94 760 940 373</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-detail-card glass-card">
+                            <div class="contact-item-icon text-glow-cyan">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div class="contact-item-text">
+                                <span>Location</span>
+                                <span>Dharga Town, Aluthgama, Sri Lanka</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form-container glass-card">
+                        <form id="portfolio-contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="form-name">Full Name</label>
+                                    <input type="text" id="form-name" placeholder="John Doe" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="form-email">Email Address</label>
+                                    <input type="email" id="form-email" placeholder="john@example.com" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-subject">Subject</label>
+                                <input type="text" id="form-subject" placeholder="Collaboration / Job Inquiry" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-message">Message</label>
+                                <textarea id="form-message" rows="5" placeholder="Write your message here..."
+                                    required></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary btn-block">
+                                Send Message <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                            <div id="form-status" class="form-status-msg"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <p>&copy; 2026 Abdur Rahman. All rights reserved.</p>
+            <p>Designed with <i class="fa-solid fa-heart text-glow-purple"></i> for Data Science & Engineering.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>

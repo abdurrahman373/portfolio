@@ -1,0 +1,17 @@
+{
+  "name": "portfolio-abdur-rahman",
+  "version": "1.0.0",
+  "description": "Interactive role-based portfolio for Abdur Rahman",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx http-server -p 3000 -c-1"
+  },
+  "keywords": [
+    "portfolio",
+    "data-science",
+    "data-engineering",
+    "machine-learning"
+  ],
+  "author": "Abdur Rahman",
+  "license": "ISC"
+}
